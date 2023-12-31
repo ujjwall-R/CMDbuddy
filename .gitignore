@@ -164,3 +164,6 @@ pw-env/
 # llm debug
 examples/ui/data/*
 .vscode
+
+# pc-specs
+examples/data/pathway-docs/machinespecs.jsonl
