@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "llm-app"
+version = "0.3.6"
+description = "LLM-App is a library for creating responsive AI applications leveraging OpenAI/Hugging Face APIs to provide responses to user queries based on live data sources. Build your own LLM application in 30 lines of code, no vector database required."
+authors = [
+    "Jan Chorowski <janek@pathway.com>",
+    "Kamil Piechowiak <kamil@pathway.com>",
+    "Jakub Kowalski <kuba@pathway.com>",
+    "Michał Bartoszkiewicz <embe@pathway.com>",
+    "Mohamed Malhou <mohamed@pathway.com>",
+    "Sergey Kulik <sergey@pathway.com>",
+    "Adrian Kosowski <adrian@pathway.com>",
+    "Mateusz Lewandowski <mateusz@pathway.com>",
+    "Olivier Ruas <olivier@pathway.com>",
+]
+license = "MIT"
+readme = "README.md"
+keywords = ["Pathway", "LLM"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/pathwaycom/llm-app"
+"Source Code" = "https://github.com/pathwaycom/llm-app"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pathway = "=0.7.7"
+openai = ">=1.2.4"
+requests = "^2.31.0"
+diskcache = "^5.6.1"
+streamlit = "^1.26.0"
+sentence-transformers = { version = "^2.2.2", optional = true }
+torch = { version = ">=2.0.0, !=2.0.1", optional = true }
+unstructured = { extras = ["all-docs"], version = "^0.10.15", optional = true }
+tiktoken = { version = "^0.5.1", optional = true }
+psycopg = { version = "^3.1.12", optional = true }
+
+
+[tool.poetry.extras]
+local = ["torch", "sentence-transformers"]
+unstructured = ["unstructured", "tiktoken"]
+unstructured_to_sql = ["tiktoken", "psycopg", "unstructured"]
+
+[tool.poetry.group.examples]
+optional = true
+
+[tool.poetry.group.examples.dependencies]
+click = "^8.1.6"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ["py310", "py311"]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["llm_app"]
+
+[tool.mypy]
+python_version = "3.10"
+exclude = ['examples']
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_equality = true
