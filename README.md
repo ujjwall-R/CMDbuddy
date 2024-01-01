@@ -1,3 +1,7 @@
+# CMDbuddy
+
+Experience terminal mastery made easy with our generative guide, featuring smart command suggestions, typo tolerance, and real-time assistance for seamless navigation and learning.
+
 ## Preview
 
 ![Alt Text](./demo.gif)
