@@ -166,7 +166,7 @@ examples/ui/data/*
 .vscode
 
 # pc-specs
-examples/data/pathway-docs/machinespecs.jsonl
+# examples/data/pathway-docs/machinespecs.jsonl
 
 #usage_count
 usage_count.jsonl
