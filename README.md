@@ -1,6 +1,10 @@
 ## Preview
 
-![Alt Text](./demo.gif)
+![Alt Text](./demo.mkv)
+
+## Acknowledgements
+
+This project is built upon [llm-app](https://github.com/pathwaycom/llm-app). We extend our gratitude to the llm-app contributors for their valuable work and contributions.
 
 ## Get Started
 
