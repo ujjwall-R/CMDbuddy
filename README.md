@@ -1,3 +1,7 @@
+## Preview
+
+![Alt Text](./demo.gif)
+
 ## Get Started
 
 ### Prerequisites
@@ -59,57 +63,27 @@ You can install and run the LLM App.
   poetry run ./run_examples.py contextful
   ```
 
+### Step 3: Set CMDbuddy as your tool
+
+Add path to main.sh in ~/.bashrc. If you use zsh add the path in ~/.zshrc.
+
+```bash
+# Add the following line at the end of the ~/.bashrc file
+alias cbuddy='path/to/project/main.sh'
+```
+
+Restart terminal or run:
+
+```bash
+source ~/.bashrc
+
+```
+
 ### Step 4: Start to use it
 
-1. **Send REST queries** (in a separate terminal window): These are examples of how to interact with the application once it's running. `curl` is a command-line tool used to send data using various network protocols. Here, it's being used to send HTTP requests to the application.
-
-   ```bash
-   curl --data '{"user": "user", "query": "How to connect to Kafka in Pathway?"}' http://localhost:8080/
-
-   curl --data '{"user": "user", "query": "How to use LLMs in Pathway?"}' http://localhost:8080/
-   ```
-
-   If you are on windows CMD, then the query would rather look like this
-
-   ```cmd
-   curl --data "{\"user\": \"user\", \"query\": \"How to use LLMs in Pathway?\"}" http://localhost:8080/
-   ```
-
-2. **Test reactivity by adding a new file:** This shows how to test the application's ability to react to changes in data by adding a new file and sending a query.
-
-   ```bash
-   cp ./data/documents_extra.jsonl ./data/pathway-docs/
-   ```
-
-   Or if using docker compose:
-
-   ```bash
-   docker compose exec llm-app-examples mv /app/examples/data/documents_extra.jsonl /app/examples/data/pathway-docs/
-   ```
-
-   Let's query again:
-
-   ```bash
-   curl --data '{"user": "user", "query": "How to use LLMs in Pathway?"}' http://localhost:8080/
-   ```
-
-### Step 5: Launch the User Interface:
-
-Go to the `examples/ui/` directory (or `examples/pipelines/unstructured/ui` if you are running the unstructured version.) and execute `streamlit run server.py`. Then, access the URL displayed in the terminal to engage with the LLM App using a chat interface.
-
-### Bonus: Build your own Pathway-powered LLM App
-
-Want to learn more about building your own app? See step-by-step guide [Building a llm-app tutorial](https://pathway.com/developers/showcases/llm-app-pathway)
-
-Or,
-
-Simply add `llm-app` to your project's dependencies and copy one of the [examples](#examples) to get started!
-
-## Showcases
-
-- [Python sales](https://github.com/pathway-labs/chatgpt-api-python-sales) - Find real-time sales with AI-powered Python API using ChatGPT and LLM (Large Language Model) App.
-
-- [Dropbox Data Observability](https://github.com/pathway-labs/dropbox-ai-chat) - See how to get started with chatting with your Dropbox and having data observability.
+1.  ```bash
+        cbuddy
+    ```
 
 ## Troubleshooting
 
@@ -117,40 +91,17 @@ Please check out our [Q&A](https://github.com/pathwaycom/llm-app/discussions/cat
 
 ### Raise an issue
 
-To provide feedback or report a bug, please [raise an issue on our issue tracker](https://github.com/pathwaycom/llm-app/issues).
+To provide feedback or report a bug, please [raise an issue](https://github.com/ujjwall-R/CMDbuddy/issues).
 
 ## Contributing
 
 Anyone who wishes to contribute to this project, whether documentation, features, bug fixes, code cleanup, testing, or code reviews, is very much encouraged to do so.
 
-To join, just raise your hand on the [Pathway Discord server](https://discord.com/invite/pathway) (#get-help) or the GitHub [discussion](https://github.com/pathwaycom/llm-app/discussions) board.
-
-If you are unfamiliar with how to contribute to GitHub projects, here is a [Get Started Guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects). A full set of contribution guidelines, along with templates, are in progress.
-
 ## Coming Soon
 
-- Templates for retrieving context via graph walks.
-- Easy setup for model drift monitoring.
-- Templates for model A/B testing.
-- Real-time OpenAI API observability.
+- Better query support
+- open source llm support
 
 ## Need help?
 
-Interested in using LLM App with your data source, stack, and custom use cases? Connect with us to get help with:
-
-- Connecting your own live data sources to your LLM application (e.g. Google or Microsoft Drive documents, Kafka, databases, API's, ...).
-- Explore how you can get your LLM application up and running in popular cloud platforms such as Azure and AWS.
-- End-to-end solution implementation.
-
-Reach us at contact@pathway.com or via <a href="https://pathway.com/solutions/llm-app">Pathway's website</a>.
-
-## Supported and maintained by
-
-<p align="center">
-  <a href="https://github.com/pathwaycom/"><img src="https://pathway.com/logo-light.svg" alt="Pathway"/></a>
-</p>
-<p align="center">
-  <a href="https://pathway.com/solutions/llm-app">
-    <img src="https://img.shields.io/badge/See%20Pathway's%20offering%20for%20AI%20applications-0000FF" alt="See Pathway's offering for AI applications"/>
-  </a>
-</p>
+Feel free to reach out.
