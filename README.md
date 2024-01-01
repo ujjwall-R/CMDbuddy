@@ -1,6 +1,6 @@
 ## Preview
 
-![Alt Text](./demo.mkv)
+![Alt Text](./demo.gif)
 
 ## Acknowledgements
 
