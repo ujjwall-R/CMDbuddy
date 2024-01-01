@@ -6,6 +6,12 @@
 
 This project is built upon [llm-app](https://github.com/pathwaycom/llm-app). We extend our gratitude to the llm-app contributors for their valuable work and contributions.
 
+## Key features
+
+1. Smart Command Suggestions: The guide provides intelligent command suggestions based on user input, making it easier for users to navigate the terminal efficiently.
+2. Gives response with respect to your current machine specifications.
+3. Typo Tolerance
+
 ## Get Started
 
 ### Prerequisites
