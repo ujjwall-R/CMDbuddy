@@ -10,7 +10,7 @@ increment_usage_count() {
 # Function to check if ./generate_static should be run
 check_generate_static() {
   current_count=$(cat usage_count.jsonl | jq -r '.doc')
-  if [ $((current_count % 6)) -eq 0 ]; then
+  if [ $((current_count % 100)) -eq 0 ]; then
     ./generate_static.sh >> /dev/null 2>&1
   fi
 }

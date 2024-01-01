@@ -167,3 +167,6 @@ examples/ui/data/*
 
 # pc-specs
 examples/data/pathway-docs/machinespecs.jsonl
+
+#usage_count
+usage_count.jsonl
