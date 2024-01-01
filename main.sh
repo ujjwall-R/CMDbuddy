@@ -28,4 +28,4 @@ make_api_call() {
 make_api_call
 increment_usage_count
 
-echo "Script executed successfully!"
+# echo "Script executed successfully!"
